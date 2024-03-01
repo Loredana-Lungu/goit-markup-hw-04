@@ -7,6 +7,9 @@
   --cloud-color: rgba(244, 244, 253, 1);
   --text-font-family: "Roboto", sans-serif;
   --font-size: 16px;
+  --icons-bg-color: rgba(244, 244, 253, 1);
+  --social-media-icons-bg-color: rgba(77, 90, 229, 1);
+  --clients-icons-color: rgba(142, 143, 153, 1);
 }
 
 * {
@@ -64,6 +67,12 @@ h3 {
 
 .hero-section {
   background-color: var(--primary-color);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("/images/hero-section-img.png");
   display: flex;
   justify-content: center;
   height: 600px;
@@ -81,6 +90,7 @@ h3 {
 
 .button-service:hover {
   color: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 ul {
@@ -144,6 +154,10 @@ a {
   padding: 25px;
 }
 
+header {
+  display: flex;
+}
+
 .hero-container {
   display: flex;
   justify-content: center;
@@ -200,6 +214,7 @@ a {
 .our-team ul {
   display: flex;
   justify-content: space-between;
+  text-align: center;
   margin: 0px;
   padding: 0px;
   gap: 24px;
@@ -212,6 +227,14 @@ a {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.our-team h3 {
+  margin-top: 30px;
+  margin-bottom: -8px;
 }
 
 .our-team-section {
@@ -225,12 +248,14 @@ a {
 .footer {
   display: flex;
   justify-content: flex-start;
+  gap: 120px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   text-align: flex-start;
-  width: 265px;
-  margin: 0px;
-  padding: 0px;
-  gap: 16px;
 }
 
 .footer .logo {
@@ -238,9 +263,11 @@ a {
   justify-content: flex-start;
 }
 
-.footer p {
+.social-media-footer p {
   display: flex;
-  justify-content: flex-start;
+  font-weight: 500;
+  margin: 0px 0px 20px 0px;
+  color: var(--footer-text-color);
 }
 
 .filters ul {
@@ -265,10 +292,18 @@ a {
   gap: 24px;
 }
 
-.first-section ul li,
-.second-section ul li,
-.third-section ul li {
+.first-section .card,
+.second-section .card,
+.third-section .card {
   border: 1px solid var(--cornflower-color);
+}
+
+.card:hover {
+  cursor: pointer;
+  border-color: var(--logo-web-color);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .first-section {
@@ -282,4 +317,94 @@ a {
 
 .third-section {
   margin-bottom: 40px;
+}
+
+.icons-features {
+  display: flex;
+  justify-content: center;
+}
+
+.icons-features svg {
+  width: 64px;
+  height: 64px;
+}
+
+.advantages .icons-features {
+  width: 264px;
+  height: 112px;
+  background-color: var(--icons-bg-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.social-media-icons svg {
+  width: 16px;
+  height: 16px;
+  gap: 24px;
+}
+
+.social-media-icons .icons {
+  width: 40px;
+  height: 40px;
+  fill: var(--clients-icons-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons:hover,
+.icons:focus {
+  background-color: var(--logo-web-color);
+  fill: white;
+}
+
+.social-media-footer {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-clients {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.icons-clients {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  fill: var(--clients-icons-color);
+}
+
+.logo-clients .client {
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--clients-icons-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-clients .client:hover {
+  border-color: var(--logo-web-color);
+  fill: var(--logo-web-color);
+  cursor: pointer;
+}
+
+.icons-clients svg {
+  width: 100px;
+  height: 50px;
 }
