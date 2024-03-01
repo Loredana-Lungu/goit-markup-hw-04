@@ -72,7 +72,7 @@ h3 {
       rgba(0, 0, 0, 0.5),
       rgba(46, 47, 66, 0.7)
     ),
-    url("/images/hero-section-img.png");
+    url("../images/hero-section-img.png");
   display: flex;
   justify-content: center;
   height: 600px;
